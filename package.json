@@ -20,7 +20,7 @@
   "description": "",
   "dependencies": {
     "css-loader": "^7.1.2",
-    "inputmask": "^5.0.9",
+    "imask": "^7.6.1",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
@@ -29,7 +29,6 @@
     "webpack-cli": "^6.0.1"
   },
   "devDependencies": {
-    "@types/inputmask": "^5.0.7",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "clean-webpack-plugin": "^4.0.0",
