@@ -29,6 +29,13 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(woff|woff2|ttf|eot|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext][query]',
+                },
+            },
+            {
                 test: /\.html$/,
                 use: ['html-loader'],
             },
