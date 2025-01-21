@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20201107 at Mon Jan 22 14:30:55 2024
+ By 
+Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)
+</metadata>
+<defs>
+<font id="Roboto-Regular" horiz-adv-x="508" >
+  <font-face 
+    font-family="Roboto"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="2 0 0 0 0 0 0 0 0 0"
+    ascent="1536"
+    descent="-512"
+    bbox="-392 -20 1360 1495"
+    underline-thickness="100"
+    underline-position="-200"
+    unicode-range="U+0002-1F4D"
+  />
+<missing-glyph horiz-adv-x="908" 
+d="M777 1456v-54h-650v54h650zM154 1456v-1456h-54v1456h54zM808 1456v-1456h-54v1456h54zM777 54v-54h-650v54h650zM777 1426l-593 -1396h-58l593 1396h58zM719 30l-593 1396h58l593 -1396h-58z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="908" 
+d="M777 1456v-54h-650v54h650zM154 1456v-1456h-54v1456h54zM808 1456v-1456h-54v1456h54zM777 54v-54h-650v54h650zM777 1426l-593 -1396h-58l593 1396h58zM719 30l-593 1396h58l593 -1396h-58z" />
+    <glyph glyph-name="glyph1" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="glyph1" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="uni000D" unicode="&#xd;" 
+ />
+    <glyph glyph-name="uni0002" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="space" unicode=" " 
+ />
+    <glyph glyph-name="uni00A0" unicode="&#xa0;" 
+ />
+    <glyph glyph-name="uni1F4D" unicode="&#x1f4d;" horiz-adv-x="1479" 
+d="M1360 774v-92q0 -164 -41 -294t-118 -221t-184.5 -139t-240.5 -48q-129 0 -236.5 48t-186 139t-121.5 221t-43 294v92q0 164 42.5 293.5t120.5 221t185.5 139.5t236.5 48q133 0 240.5 -48t185 -139.5t119 -221t41.5 -293.5zM1169 682v94q0 130 -26.5 230t-77.5 168
+t-124.5 103t-166.5 35q-90 0 -162.5 -35t-124 -103t-79.5 -168t-28 -230v-94q0 -131 28 -231.5t80.5 -169t125 -103.5t162.5 -35q94 0 167 35t123.5 103.5t76.5 169t26 231.5zM-102 1155v17l116 322h195v-21l-223 -318h-88zM-392 1409v85h167v-79q0 -72 21 -124t63 -97
+l-73 -58q-86 45 -132 116.5t-46 156.5z" />
+    <glyph glyph-name="glyph5" horiz-adv-x="1409" 
+d="M1290 774v-92q0 -164 -41 -294t-118 -221t-184.5 -139t-240.5 -48q-129 0 -236.5 48t-186 139t-121.5 221t-43 294v92q0 164 42.5 293.5t120.5 221t185.5 139.5t236.5 48q133 0 240.5 -48t185 -139.5t119 -221t41.5 -293.5zM1099 682v94q0 130 -26.5 230t-77.5 168
+t-124.5 103t-166.5 35q-90 0 -162.5 -35t-124 -103t-79.5 -168t-28 -230v-94q0 -131 28 -231.5t80.5 -169t125 -103.5t162.5 -35q94 0 167 35t123.5 103.5t76.5 169t26 231.5z" />
+    <glyph glyph-name="glyph6" horiz-adv-x="801" 
+d="M402 1156v17l116 322h195v-21l-223 -318h-88zM112 1410v85h167v-79q0 -72 21 -124t63 -97l-73 -58q-86 45 -132 116.5t-46 156.5z" />
+  </font>
+</defs></svg>

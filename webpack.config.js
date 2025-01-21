@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development', // Режим разработки или продакшен
+    mode: 'development',
     entry: './src/index.ts',
     output: {
         filename: 'bundle.js',

@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 20px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  &__form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+  &__field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    & > .contact-form__label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+    & > .contact-form__input,
+    & > .contact-form__textarea {
+      @include input-styles();
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 150px;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+
+  &__submit {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+
+    &:active {
+      background-color: color.adjust($primary-color, $lightness: -20%);
+    }
+
+    @include mobile {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
