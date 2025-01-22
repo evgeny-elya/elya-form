@@ -57,36 +57,13 @@
 
   &__textarea {
     resize: none;
-    height: 150px;
+    height: 100px;
     overflow: auto;
     margin-bottom: 8px;
   }
 
   &__check {
-    margin-bottom: 28px;
-  }
-
-  &__submit {
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: $border-radius;
-    padding: 12px;
-    font-size: 16px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: color.adjust($primary-color, $lightness: -10%);
-    }
-
-    &:active {
-      background-color: color.adjust($primary-color, $lightness: -20%);
-    }
-
-    @include mobile {
-      padding: 10px;
-      font-size: 14px;
-    }
+    margin-bottom: 18px;
   }
 
   .error-message {
@@ -101,4 +78,28 @@
 .contact-form__input.contact-form__input--error,
 .contact-form__textarea.contact-form__input--error {
   border: 1px solid red;
+}
+
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px 0;
+
+  &:hover {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+  }
+
+  &:active {
+    background-color: color.adjust($primary-color, $lightness: -20%);
+  }
+
+  @include mobile {
+    padding: 10px;
+    font-size: 14px;
+  }
 }

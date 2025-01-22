@@ -3,17 +3,23 @@ import { validateFormData } from './form-validator';
 import { submitForm } from '../services/api-service';
 import { IFormData } from '../interfaces/form-data';
 import { IErrorResponse, ISuccessResponse } from '../interfaces/api.interfaces';
+import { showLoader, hideLoader } from './loader'; // Импортируем функции для работы с лоадером
 
 export const initializeForm = (): void => {
     const form = document.querySelector('.contact-form__form') as HTMLFormElement | null;
     const phoneInput = '#phone';
+    const loader = document.getElementById('loader') as HTMLElement; // Указываем тип элемента loader
+    const simulateErrorCheckbox = document.getElementById('simulate-error') as HTMLInputElement;
 
-    if (!form) return;
+    if (!form || !loader) return; // Если форма или лоадер не найдены, прекращаем выполнение
 
     applyPhoneMask(phoneInput);
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+
+        // Показываем лоадер
+        showLoader(loader);
 
         const formData: IFormData = {
             name: (document.getElementById('name') as HTMLInputElement).value.trim(),
@@ -22,16 +28,17 @@ export const initializeForm = (): void => {
             message: (document.getElementById('message') as HTMLTextAreaElement).value.trim(),
         };
 
+        // Проверяем, выбран ли чекбокс для симуляции ошибки
+        const simulateError = simulateErrorCheckbox?.checked ?? false;
+
         const { isValid, errors } = validateFormData(formData);
         clearErrors();
 
         if (!isValid) {
             displayErrors(errors);
+            hideLoader(loader); // Прячем лоадер в случае ошибки
             return;
         }
-
-        // Проверяем, выбран ли чекбокс для симуляции ошибки
-        const simulateError = (document.getElementById('simulate-error') as HTMLInputElement)?.checked;
 
         try {
             const response = await submitForm(formData, simulateError);
@@ -42,11 +49,14 @@ export const initializeForm = (): void => {
                 handleErrors(response as IErrorResponse);
             }
         } catch (error) {
-            alert('Произошла ошибка при отправке формы. Попробуйте еще раз.');
+            alert('Произошла ошибка при отправке формы. Попробуйте еще раз. (Смотрите консоль)');
+        } finally {
+            hideLoader(loader); // Скрываем лоадер после завершения запроса
         }
     });
 };
 
+// Функции для отображения и скрытия лоадера
 const clearErrors = (): void => {
     document.querySelectorAll('.error-message').forEach((el) => {
         el.textContent = '';

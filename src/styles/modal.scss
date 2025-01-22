@@ -1,0 +1,69 @@
+/* Базовые стили для модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: none; /* По умолчанию скрыто */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden; /* Чтобы не прокручивалась страница */
+}
+
+/* Стили для модального контента */
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 40px 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+  min-height: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+/* Кнопка закрытия */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  font-size: 30px;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Анимация появления модального окна */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Анимация для модального контента (подъем сверху) */
+@keyframes slideUp {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Когда модальное окно активно, показываем его */
+.modal.show {
+  display: flex;
+}
+
+/* Блокировка прокрутки страницы */
+body.modal-open {
+  overflow: hidden;
+}

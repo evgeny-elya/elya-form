@@ -18,8 +18,10 @@ export const submitForm = async (
 
     try {
         const response: AxiosResponse<ISuccessResponse | IErrorResponse> = await axios.post(url, formData);
+        console.log(response.data);
         return response.data;
     } catch (error) {
+        console.log(error);
         throw new Error('Ошибка сети или сервера');
     }
 };
