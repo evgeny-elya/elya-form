@@ -1,10 +1,10 @@
 import IMask from 'imask';
 
 export const applyPhoneMask = (selector: string): void => {
-    const input = document.querySelector(selector) as HTMLInputElement;
+    const phoneInput = document.querySelector(selector) as HTMLInputElement | null;
 
-    if (input) {
-        const phoneMask = IMask(input, {
+    if (phoneInput) {
+        IMask(phoneInput, {
             mask: '+000 00 000-00-00',
         });
     }

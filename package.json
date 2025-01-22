@@ -19,6 +19,7 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
+    "axios": "^1.7.9",
     "css-loader": "^7.1.2",
     "imask": "^7.6.1",
     "sass": "^1.83.4",

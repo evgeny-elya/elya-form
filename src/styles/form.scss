@@ -2,6 +2,10 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+#form-description {
+  margin-bottom: 12px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -12,7 +16,7 @@
 
   &__title {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     color: $primary-color;
     text-align: center;
   }
@@ -33,9 +37,10 @@
   }
 
   &__field {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     & > .contact-form__label {
       font-size: 14px;
@@ -54,7 +59,11 @@
     resize: none;
     height: 150px;
     overflow: auto;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__check {
+    margin-bottom: 28px;
   }
 
   &__submit {
@@ -81,13 +90,15 @@
   }
 
   .error-message {
+    position: absolute;
+    bottom: 0;
     color: red;
     font-size: 12px;
     margin-top: 4px;
   }
+}
 
-  .contact-form__input.error,
-  .contact-form__textarea.error {
-    border: 1px solid red;
-  }
+.contact-form__input.contact-form__input--error,
+.contact-form__textarea.contact-form__input--error {
+  border: 1px solid red;
 }
